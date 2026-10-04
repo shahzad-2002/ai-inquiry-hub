@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-paper text-ink2 font-body antialiased; }
+h1, h2, h3, h4 { @apply font-display; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #DAD7EE; border-radius: 4px; }
+
+:focus-visible { outline: 2px solid #6D5BD0; outline-offset: 2px; }
+
+@layer components {
+  .input {
+    @apply w-full text-sm border border-border rounded-md px-3 py-2 bg-panel text-ink2 outline-none focus:border-violet transition-colors;
+  }
+}
